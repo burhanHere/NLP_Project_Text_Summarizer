@@ -1,0 +1,208 @@
+/* Updated CSS for the Text Summarizer Application */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  height: 100vh;
+  padding: 20px;
+  background-color: #121212;
+  color: #ffa500;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.Model-Work {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.input-box {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  border: 2px solid #ffa500;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  color: #fff;
+  font-size: 1rem;
+  overflow-y: auto;
+  /* Ensure the area can scroll vertically */
+  max-height: 300px;
+  /* Set a max height for scrolling if needed */
+}
+
+/* Customize the scrollbar for .input-box */
+.input-box::-webkit-scrollbar {
+  width: 8px;
+  /* Width of the scrollbar */
+}
+
+.input-box::-webkit-scrollbar-thumb {
+  background: #1e1e1e;
+  /* Color of the scrollbar thumb */
+  border-radius: 4px;
+  /* Rounded corners for the scrollbar thumb */
+}
+
+.input-box::-webkit-scrollbar-thumb:hover {
+  background: #ffa500;
+  /* Color when hovering over the scrollbar thumb */
+}
+
+.input-box::-webkit-scrollbar-track {
+  background: #ffa500;
+  /* Background of the scrollbar track */
+  border-radius: 4px;
+  /* Rounded corners for the scrollbar track */
+}
+
+.btn-container {
+  /* border: 2px solid #ffa500; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.btn-container div div p {
+  background-color: #ffa500;
+}
+
+.file-upload-btn {
+  background-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #ffa500;
+}
+
+.summarize-btn {
+  background-color: #ffa500;
+  height: fit-content;
+  color: #121212;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.summarize-btn:hover {
+  background-color: #ff8c00;
+}
+
+.summarize-btn:disabled {
+  background-color: #a66d00;
+  cursor: not-allowed;
+}
+
+hr {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ff8c00;
+  height: 1px;
+  border: none;
+}
+
+.summary-box {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #1e1e1e;
+  border: 1px solid #ffa500;
+  border-radius: 5px;
+}
+
+.summary-box h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.summary-box p {
+  font-size: 1rem;
+  color: #ffffff;
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ffa500 #1e1e1e;
+}
+
+.summary-box p::-webkit-scrollbar {
+  width: 8px;
+}
+
+.summary-box p::-webkit-scrollbar-track {
+  background-color: #1e1e1e;
+}
+
+.summary-box p::-webkit-scrollbar-thumb {
+  background-color: #ffa500;
+  border-radius: 4px;
+}
+
+.summary-box p::-webkit-scrollbar-thumb:hover {
+  background-color: #ff8c00;
+}
+
+/* Enhanced CSS for Model Details */
+.model-details {
+  width: 25vw;
+  height: auto;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #1e1e1e;
+  border: 1px solid #ffa500;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 1rem;
+  overflow-y: auto;
+  max-height: 70vh;
+  scrollbar-width: thin;
+  scrollbar-color: #ffa500 #1e1e1e;
+}
+
+.model-details p a {
+  color: #ffa500;
+}
+
+.model-details h2 {
+  position: sticky;
+  top: 0px;
+  right: 10px;
+  background-color: #1e1e1e;
+  color: #ffa500;
+}
+
+.model-details::-webkit-scrollbar {
+  width: 8px;
+}
+
+.model-details::-webkit-scrollbar-track {
+  background-color: #1e1e1e;
+}
+
+.model-details::-webkit-scrollbar-thumb {
+  background-color: #ffa500;
+  border-radius: 4px;
+}
+
+.model-details::-webkit-scrollbar-thumb:hover {
+  background-color: #ff8c00;
+}
+
+.model-details pre {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #f8f8f8;
+  overflow-x: auto;
+}

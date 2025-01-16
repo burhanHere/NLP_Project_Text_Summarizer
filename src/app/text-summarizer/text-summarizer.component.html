@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="Model-Work">
+    <h1>Text Summarizer</h1>
+    <textarea
+      #inputTextArea
+      [(ngModel)]="inputText"
+      placeholder="Enter your text here..."
+      rows="10"
+      class="input-box"
+    ></textarea>
+    <div class="btn-container">
+      <div>
+        <p>Get text from file.(docx)</p>
+        <input
+          class="file-upload-btn"
+          type="file"
+          (change)="handleFileUpload($event)"
+          accept=".pdf, .docx"
+        />
+      </div>
+      <button (click)="summarize()" class="summarize-btn" [disabled]="loading">
+        {{ loading ? "Summarizing..." : "Summarize" }}
+      </button>
+    </div>
+    @if (summary) {
+    <hr />
+    <div class="summary-box">
+      <h2>Summary:</h2>
+      <p>{{ summary }}</p>
+    </div>
+    }
+  </div>
+
+  <!-- New section for model details -->
+  <div class="model-details">
+    <h2>Project Details</h2>
+    <p>
+      <strong>Group Members:</strong><br />
+      Areeba Khan L1F21BSCS0485<br />
+      Muhammad Burhan L1F21BSCS1059<br />
+      Haseeb L1F21BSCS1262<br /><br />
+
+      <strong>Pretrained Model:</strong><br />
+      BART (large-sized model), fine-tuned on CNN Daily Mail<br />
+      BART model pre-trained on English language, and fine-tuned on CNN Daily
+      Mail. It was introduced in the paper
+      <i
+        >BART: Denoising Sequence-to-Sequence Pre-training for Natural Language
+        Generation, Translation, and Comprehension</i
+      >
+      by Lewis et al. and first released in
+      <a
+        href="https://github.com/pytorch/fairseq/tree/master/examples/bart"
+        target="_blank"
+        >this repository</a
+      >.<br /><br />
+
+      <strong>Model Description:</strong><br />
+      BART is a transformer encoder-decoder (seq2seq) model with a bidirectional
+      (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is
+      pre-trained by corrupting text with an arbitrary noising function, and
+      learning to reconstruct the original text. BART is particularly effective
+      when fine-tuned for text generation tasks (e.g., summarization,
+      translation) but also works well for comprehension tasks (e.g., text
+      classification, question answering). This checkpoint has been fine-tuned
+      on CNN Daily Mail, a large collection of text-summary pairs.<br /><br />
+
+      <strong>Intended Uses & Limitations:</strong><br />
+      You can use this model for text summarization.<br /><br />
+
+      <strong>How to Use:</strong><br />
+    </p>
+    <pre>
+      from transformers import pipeline
+      summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+    </pre>
+    <br />
+
+    <p><strong>BibTeX Entry:</strong><br /></p>
+    <pre>
+      &#64;article&#123; DBLP:journals/corr/abs-1910-13461,
+        author = &#123; Mike Lewis and Yinhan Liu and Naman Goyal and Marjan Ghazvininejad and Abdelrahman Mohamed and Omer Levy and Veselin Stoyanov and Luke Zettlemoyer &#125;,
+        title = &#123; &#123;BART: &#125; Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension &#125;,
+        journal = &#123; CoRR &#125;,
+        volume = &#123;abs/1910.13461 &#125;,
+        year = &#123; 2019 &#125;,
+        url = &#123;http://arxiv.org/abs/1910.13461 &#125;,
+        eprinttype = &#123;arXiv &#125;,
+        eprint = &#123;1910.13461 &#125;,
+        timestamp = &#123;Thu, 31 Oct 2019 14:02:26 +0100 &#125;,
+        biburl = &#123;https://dblp.org/rec/journals/corr/abs-1910-13461.bib &#125;,
+        bibsource = &#123;dblp computer science bibliography, https://dblp.org &#125;
+        &#125;
+    </pre>
+  </div>
+</div>

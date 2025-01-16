@@ -1,0 +1,14 @@
+https://huggingface.co/facebook/bart-large-cnn
+
+Time and again, our friendship has been tested. I had lost all hope that I would lose such a dear friend, but you were the ones who held onto us because you believed that our friendship could overcome any barrier. Thank you for believing in us and for believing in me.
+I want you to know that having a fantastic friend like you is a blessing. Your friendship is more valuable than all the treasures in the universe. I could never have imagined how you could have touched my heart in so many different ways, and I will always cherish our friendship with everything I have in me. I adore you, my lovely friend.
+
+BART (large-sized model), fine-tuned on CNN Daily Mail
+BART model pre-trained on English language, and fine-tuned on CNN Daily Mail. It was introduced in the paper BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension by Lewis et al. and first released in this repository.
+
+Model Description:
+BART is a transformer encoder-decoder (seq2seq) model with a bidirectional (BERT-like) encoder and an autoregressive (GPT-like) decoder. BART is pre-trained by corrupting text with an arbitrary noising function, and learning to reconstruct the original text. BART is particularly effective when fine-tuned for text generation tasks (e.g., summarization, translation) but also works well for comprehension tasks (e.g., text classification, question answering). This checkpoint has been fine-tuned on CNN Daily Mail, a large collection of text-summary pairs.
+
+
+Time and again, our friendship has been tested. I had lost all hope that I would lose such a dear friend, but you were the ones who held onto us because you believed that our friendship could overcome any barrier. Thank you for believing in us and for believing in me.
+I want you to know that having a fantastic friend like you is a blessing. Your friendship is more valuable than all the treasures in the universe. I could never have imagined how you could have touched my heart in so many different ways, and I will always cherish our friendship with everything I have in me. I adore you, my lovely friend.
